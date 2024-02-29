@@ -31,10 +31,11 @@ div:nth-child(2) {
 }
 /* buttons 2D dashboard */
 form:nth-child(3) {
-    background: rgb(84, 84, 84); 
+    background: rgb(61, 61, 61);
+    background: radial-gradient(circle, rgb(87, 87, 87) 0%, rgba(33,33,33,1) 100%);
     grid-row: 2/4;
     grid-column: 1/4;
-    border-radius: 50% 50% 0px 0px;
+    border-radius: 40% 40% 0px 0px;
     z-index: 10;
     display: flex;
     justify-content: center ;
@@ -47,10 +48,8 @@ form:nth-child(3) div {
 }
 
 main > div:last-child {
-    /* background-color: rgba(3, 158, 0, 0.7); */
     grid-row: 3/4;
     grid-column: 1/4;
-    /* width: 300px; */
     position: relative;
     perspective: 100px;
     z-index: 11;
@@ -59,12 +58,10 @@ main > div:last-child {
 }
 
 main > div:last-child form {
-    /* padding: 50px; */
     width: 85%;
     height: 108%;
     position: absolute;
-    /* border: 1px solid black; */
-    background: rgb(52, 52, 52); 
+    background: rgba(33,33,33,0.2) ;
     transform-style: preserve-3d;
     transform: rotateX(10deg) translateY(-14%);
     display: flex;

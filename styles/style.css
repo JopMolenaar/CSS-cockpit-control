@@ -64,12 +64,21 @@ main > div:last-child form {
     background: rgba(33,33,33,0.2) ;
     transform-style: preserve-3d;
     transform: rotateX(10deg) translateY(-14%);
-    display: flex;
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: center;
+
 }
-main > div:last-child form input {
+main > div:last-child form label:nth-child(1) {
+    position: relative;
+    grid-column: 2/3;
+}
+main > div:last-child form label input {
     transform: rotate(90deg);
+    position: absolute;
+}
+main > div:last-child form label:first-child input:nth-child(2) {
+    transform: rotate(0deg);
 }
 
 

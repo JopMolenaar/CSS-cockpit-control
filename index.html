@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/ufoBorder.css" />
         <title>Document</title>
     </head>
     <body>
@@ -35,9 +36,17 @@
             <!-- angled form with joystick and speed-handle -->
             <div>
                 <form action="">
-                    
-                    <label for="">Move<input type="range" name="turnY" min="0" max="10" /><input type="range" name="turnX" min="0" max="10" /></label>
-                    <label for="">Speed<input type="range"  name="speed" min="0" max="10" /></label>
+                    <label for="">Move
+                        <div>
+                            <input type="range" name="turnY" min="0" max="10" />
+                            <input type="range" name="turnX" min="0" max="10" />
+                        </div>
+                    </label>
+                    <label for="">Speed
+                        <div>
+                            <input type="range"  name="speed" min="0" max="10" />
+                        </div>
+                    </label>
                     <!-- TODO make input joystick slider -->
                     <!-- TODO make input slider for the speed of the animation (possible jet hobbels) -->
                 </form>

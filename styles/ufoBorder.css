@@ -1,0 +1,85 @@
+/* Keyframes */
+@keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+
+  :root{
+    --border-radius: 100%;
+    --border-size: 0.6rem;
+    --border-bg: conic-gradient(
+      rgb(38, 149, 28) 0.00turn 0.05turn, 
+      rgb(113, 237, 102) 0.05turn 0.10turn, 
+      rgb(38, 149, 28) 0.10turn 0.15turn, 
+      rgb(113, 237, 102) 0.15turn 0.20turn, 
+      rgb(38, 149, 28) 0.20turn 0.25turn, 
+      rgb(113, 237, 102) 0.25turn 0.30turn, 
+      rgb(38, 149, 28) 0.30turn 0.35turn, 
+      rgb(113, 237, 102) 0.35turn 0.40turn, 
+      rgb(38, 149, 28) 0.40turn 0.45turn, 
+      rgb(113, 237, 102) 0.45turn 0.50turn, 
+      rgb(38, 149, 28) 0.50turn 0.55turn, 
+      rgb(113, 237, 102) 0.55turn 0.60turn, 
+      rgb(38, 149, 28) 0.60turn 0.65turn, 
+      rgb(113, 237, 102) 0.65turn 0.70turn, 
+      rgb(38, 149, 28) 0.70turn 0.75turn, 
+      rgb(113, 237, 102) 0.75turn 0.80turn, 
+      rgb(38, 149, 28) 0.80turn 0.85turn, 
+      rgb(113, 237, 102) 0.85turn 0.90turn, 
+      rgb(38, 149, 28) 0.90turn 0.95turn,
+      rgb(113, 237, 102) 0.95turn 1.00turn
+    );
+    --padding: 1rem;
+    --animation-speed-border: 10s;
+  }
+  
+  /* Rotating border */
+  form:nth-child(3) {
+    position: relative;
+    overflow: hidden;
+    padding: calc(var(--padding) + var(--border-size));
+    grid-row: 2/4;
+    grid-column: 1/4;
+    border-radius: 50% 50% 30% 30%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+
+    /* Om het meer in de ufo te laten lijken */
+    width: 120%;
+    transform: translateX(-10%);
+    height: 120%;
+  }
+  /* Rotating border before */
+  form:nth-child(3)::before {
+    content: '';
+    display: block;
+    background: var(--border-bg);
+    width: calc(100% * 1.41421356237);
+    padding-bottom: calc(100% * 1.41421356237);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    z-index: -1;
+    animation: spin var(--animation-speed-border) linear infinite;
+    animation-direction: reverse;
+  }
+
+  /* Rotating border after */
+  form:nth-child(3)::after {
+    content: '';
+    position: absolute;
+    inset: var(--border-size);
+    background: radial-gradient(circle, rgb(68, 113, 71) 0%, rgba(33,33,33,1) 100%);
+    z-index: -1;
+    border-radius: calc(var(--border-radius) - var(--border-size));
+  }
+
+/* code from https://codepen.io/MauriciAbad/pen/WNrpmPr but experimented and changed it */

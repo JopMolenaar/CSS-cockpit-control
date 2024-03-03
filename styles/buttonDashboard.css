@@ -1,5 +1,4 @@
 form:nth-child(3) div {
-    /* border: solid rgb(58, 58, 58) 2px; */
     border-radius: 5px;
     padding: 0.4em;
     background-color: rgba(128, 128, 128, 0.319);
@@ -13,36 +12,9 @@ form:nth-child(3) div {
     gap: 0.2rem;
 }
 
-/* form:nth-child(3) div label input {
-height: 25%;    
-width: 50%;
-}
-input[type="checkbox"]:not(:checked), 
-input[type="checkbox"]:checked {
-  position: absolute;
-  left: -9999%;
-}
-
-form:nth-child(3) div label {
-  display: inline-block;
-  padding: 10px;
-  cursor: pointer;
-  border: 1px solid black;
-  color: black;
-  background-color: white;
-  margin-bottom: 10px;
-}
-
-form:nth-child(3) div label:has(input[type="checkbox"]:checked) {
-  border: 1px solid white;
-  color: white;
-  background-color: black;
-} */
-
 form:nth-child(3) div label input[type="checkbox"] {
     height: 25px;
     width: 25px;
-    /* Adjust other styles as needed */
 }
 
 input[type="checkbox"] {
@@ -57,35 +29,29 @@ input[type="checkbox"] {
 
     --color-btn-on-bg: rgb(84, 188, 112);
     --color-btn-on-shadow: rgb(84, 188, 112);
-  }
-  
+}
+
 form:nth-child(3) div label {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     cursor: pointer;
-    /* border: 3px solid rgb(255, 0, 0); */
     border-radius: 10px;
-    /* color: rgb(255, 255, 255); */
     background-color: var(--color-btn-off-bg);
-    /* margin-bottom: 10px; */
     position: relative;
-text-shadow: black 10px;
-/* box-shadow: 0 5px 15px var(--color-btn-shadow); */
-
-color: black;
-border: black 0.125em solid;
-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--color-btn-off-shadow);
-box-shadow: inset 0 0 0.5em 0 black, 0 0 0.5em 0 var(--color-btn-off-shadow);
+    text-shadow: black 10px;
+    color: black;
+    border: black 0.125em solid;
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--color-btn-off-shadow);
+    box-shadow: inset 0 0 0.2em 0 black, 0 0 0.5em 0 black;
+    transition: 100ms;
 }
-
 
 form:nth-child(3) div label:has(input[type="checkbox"]:checked) {
-    /* border: 1px solid rgb(11, 171, 0); */
-    /* color: rgb(0, 0, 0); */
     background-color: var(--color-btn-on-bg);
-    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--color-btn-on-shadow);
-    box-shadow: inset 0 0 0.5em 0 black, 0 0 0.5em 0 var(--color-btn-on-shadow);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--color-btn-on-shadow);
+    box-shadow: inset 0 0 0.5em 0 black;
 }
-

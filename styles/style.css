@@ -51,26 +51,13 @@ main > div:last-child form label {
 main > div:last-child form label:nth-child(1) {
     position: relative;
     grid-column: 2/3;
-    width: 50%;
+    width: 5em;
     height: 50%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     transition: 100ms;
 }
-/* main > div:last-child form label:nth-child(1)::before{
-    content: "";
-    background-color: green;
-    grid-area: 2/1/3/4;0
-    width: 100%;
-    height: 100%;
-}
-main > div:last-child form label:nth-child(1)::after{
-    content: "";
-    background-color: green;
-    /* grid-area: 2/1/3/4; */
-    /* width: 100%;
-    height: 100%; */
-/* } */ 
+
 main > div:last-child form label:nth-child(1) button {
     width: 100%;
     height: 100%;

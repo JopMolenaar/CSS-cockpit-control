@@ -26,8 +26,7 @@ main > div:last-child {
     z-index: 11;
     display: flex;
     justify-content: center;
-    width: 110%;
-    transform: translate(-5%);
+    width: 100%;
 }
 main > div:last-child form {
     width: 85%;
@@ -122,9 +121,10 @@ main > div:last-child form label:first-child input:nth-child(2) {
 }
 
 
-/* @media (min-width: 70em){
+/* @media (min-width: 120em){
 
-div:nth-child(2) {
+
+/* div:nth-child(2) {
     grid-row: 1/4;
     grid-column: 1/4;
 }
@@ -137,5 +137,4 @@ form:nth-child(3) {
 div:last-child {
     grid-row: 3/4;
     grid-column: 2/3;
-} 
-} */
+}  */

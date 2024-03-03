@@ -30,7 +30,9 @@ input[type="checkbox"] {
     --color-btn-on-bg: rgb(84, 188, 112);
     --color-btn-on-shadow: rgb(84, 188, 112);
 }
-
+form:nth-child(3) div {
+    max-height: 10em;
+}
 form:nth-child(3) div label {
     display: flex;
     justify-content: center;

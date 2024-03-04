@@ -34,12 +34,14 @@ main > div > div > div {
     left: -500px;
     top: -500px;
     transform-style: preserve-3d;
-    animation: move 20s infinite linear;
+    animation: move calc((10s - var(--speed))*2) infinite linear;
+    /* animation: move 20s infinite linear; */
     animation-fill-mode: forwards;
 }
 
 main > div > div > div:nth-child(2) {
-    animation: move 20s infinite linear;
+    /* animation: move 20s infinite linear; */
+    animation: move calc((10s - var(--speed))*2) infinite linear;
     animation-delay: 6s;
 }
 
@@ -48,7 +50,8 @@ main > div > div > div > div {
     height: 100%;
     position: absolute;
     opacity: 0;
-    animation: fade 20s infinite linear;
+    /* animation: fade 20s infinite linear; */
+    animation: fade calc((10s - var(--speed))*2) infinite linear;
     animation-delay: 0;
 }
 

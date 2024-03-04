@@ -102,3 +102,29 @@
     width: 100%;
   }
 }
+
+
+/* 
+html {
+	height:100dvh;
+	
+	background-image:
+		conic-gradient(from var(--angle, 0deg), crimson,dodgerblue,crimson);
+	
+	animation:draaien .001s linear infinite;
+}
+
+@keyframes draaien {
+	0% {
+		--angle:0deg;
+	}
+	100% {
+		--angle:360deg;
+	}
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+} */

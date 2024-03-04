@@ -1,15 +1,33 @@
+:root {
+    --speed5: 
+}
+
+
+
+body {
+    background-color: black;
+}
 body,
 main {
     height: 100vh;
     margin: 0;
     position: relative;
-overflow: hidden;
+    overflow: hidden;
+    /* background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
+    background-size: cover; */
+    /* --dot-bg: black;
+    --dot-color: white;
+    --dot-size: 1px;
+    --dot-space: 22px;
+    background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color); */
 }
 section,
 form {
     background-color: rgba(43, 43, 43, 0.7);
     height: 100%;
-    /* width: 100%; */
 }
 
 main {

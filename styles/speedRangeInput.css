@@ -1,0 +1,68 @@
+main > div:last-child form label:nth-child(2) input {
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+    transform: translateY(20px) rotate(90deg);
+    background: none;
+}
+
+main > div:last-child form label:nth-child(2) input::-webkit-slider-runnable-track {
+    height: 1.5em;
+    border-radius: 0.5em;
+    border: none;
+    box-shadow: inset 0 0 10px #000000;
+}
+main > div:last-child form label:nth-child(2) input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 2.2em;
+    height: 4em;
+    background: #ff3131;
+    border: 2px solid #680000; 
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px #000000;
+    margin-top: calc(1.5em * 0.5 - max(4em * 0.5,0.3em));
+}
+
+/* Mozilla Firefox */
+main > div:last-child form label:nth-child(2) input::-moz-range-track {
+    height: 1.5em;
+    border-radius: 0.5em;
+    border: none;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+main > div:last-child form label:nth-child(2) input::-moz-range-thumb {
+    width: 2.2em;
+    height: 4em;
+    background: #ff3131;
+    border: 2px solid #680000; 
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px #000000;
+    margin-top: calc(1.5em * 0.5 - max(4em * 0.5,0.3em));
+}
+
+/* Microsoft Edge */
+main > div:last-child form label:nth-child(2) input::-ms-track {
+    height: 1.5em;
+    border-radius: 0.5em;
+    border: none;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+main > div:last-child form label:nth-child(2) input::-ms-thumb {
+    width: 2.2em;
+    height: 4em;
+    background: #ff3131;
+    border: 2px solid #680000; 
+    border-radius: 5px;
+    box-shadow: inset 0 0 8px #000000;
+    margin-top: calc(1.5em * 0.5 - max(4em * 0.5,0.3em));
+}
+
+
+/* https://stackoverflow.com/questions/28159866/style-input-range-before-and-after */

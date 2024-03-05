@@ -35,7 +35,8 @@
       rgb(113, 237, 102) 0.95turn 1.00turn
     );
     --padding: 1rem;
-    --animation-speed-border: 10s;
+    /* --animation-speed-border: 10s; */
+    --animation-speed-border: calc(8s + var(--speed));
   }
   
   /* Rotating border */

@@ -7,7 +7,6 @@ const updateRange = (range) => {
     const rangeValue = range.value + "s";
     // a custom property is set on the HTML element
     document.documentElement.style.setProperty("--" + rangeName, rangeValue);
-    console.log("--" + rangeName, rangeValue);
 };
 
 ranges.forEach((range) => {

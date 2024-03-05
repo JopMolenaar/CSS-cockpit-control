@@ -1,8 +1,9 @@
-/* :root {
-    --speed: 0;
-} */
-
-
+:root {
+    --standard-animation-speed: 20s;
+    --animation-delay: 1s;
+    --speed: 5s;
+    /* --animation-speed-border: calc(8s - var(--speed)); */
+}
 
 body {
     background-color: black;
@@ -13,21 +14,22 @@ main {
     margin: 0;
     position: relative;
     overflow: hidden;
-    /* background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
-    background-size: cover; */
-    /* --dot-bg: black;
-    --dot-color: white;
-    --dot-size: 1px;
-    --dot-space: 22px;
-    background:
-          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-          var(--dot-color); */
 }
 section,
 form {
     background-color: rgba(43, 43, 43, 0.7);
     height: 100%;
+}
+
+/* visually hidden */
+main > div:last-child form label:nth-child(2) span {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 main {
@@ -115,12 +117,7 @@ main > div:last-child form label:nth-child(1):has(button:nth-child(4):active) {
 
 
 
-main > div:last-child form label:nth-child(2) {
-    padding: 0.3rem;
-    border: solid white 1px;
-    border-radius: 15px;
-    background-color: rgba(68, 113, 71, 0.7);
-}
+
 main > div:last-child form label div {
     display: grid;
     place-items: center;
@@ -130,6 +127,7 @@ main > div:last-child form label div input {
     transform: rotate(90deg);
     position: absolute;
     z-index: -1;
+    /* transform: translateY(10px); */
 }
 main > div:last-child form label div input:hover {
     z-index: 0;
@@ -137,22 +135,3 @@ main > div:last-child form label div input:hover {
 main > div:last-child form label:first-child input:nth-child(2) {
     transform: rotate(0deg);
 }
-
-
-/* @media (min-width: 120em){
-
-
-/* div:nth-child(2) {
-    grid-row: 1/4;
-    grid-column: 1/4;
-}
-
-form:nth-child(3) {
-    grid-row: 2/4;
-    grid-column: 2/3;
-}
-
-div:last-child {
-    grid-row: 3/4;
-    grid-column: 2/3;
-}  */

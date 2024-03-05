@@ -10,7 +10,7 @@ form:nth-child(2) div {
     padding: 0.4em;
     background-color: rgba(128, 128, 128, 0.319);
     width: fit-content;
-    height: 30%;
+    height: 28%;
     margin-top: 0.5em;
     padding-top: 1em;
     min-width: 5em;
@@ -21,8 +21,6 @@ form:nth-child(2) div {
     max-height: 10em;
     border-radius: 50% 50% 4% 5% / 5% 5% 5% 5% ;
 }
-
-
 
 form:nth-child(2) div label input[type="checkbox"] {
     height: 25px;

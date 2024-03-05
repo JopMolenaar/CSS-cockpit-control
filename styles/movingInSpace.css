@@ -1,50 +1,55 @@
 main > div:first-child {
     transition: 2s
 }
-html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):has(main > div:last-child form label:nth-child(1) button:nth-child(1):hover) {
+html:has(main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child:active):has(main > div:last-child form label:nth-child(1) button:nth-child(1):hover) {
     & main > div:first-child {
         transform: translateY(-100px);
     }
     & main form:nth-child(2) {
         transform: translateX(-10%) translateY(2%);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3) {
+    & main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child {
         transform: translateY(-50px);
     }
 }
 
-html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):has(main > div:last-child form label:nth-child(1) button:nth-child(2):hover) {
+html:has(main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child:active):has(main > div:last-child form label:nth-child(1) button:nth-child(2):hover) {
     & main > div:first-child {
         transform: translateX(100px);
     }
     & main form:nth-child(2) {
         transform: translateX(-10%) rotate(-3deg);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3) {
+    & main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child{
         transform: translateX(-50px);
+    }
+    & main > div:last-child form label:nth-child(1) div:nth-child(3){
+        /* transform: translateX(-50px); */
+        /* transform: rotate(-30deg) translateY(20px); */
+        /* transform: rotate(-20deg); */
     }
 }
 
-html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):has(main > div:last-child form label:nth-child(1) button:nth-child(4):hover) {
+html:has(main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child:active):has(main > div:last-child form label:nth-child(1) button:nth-child(4):hover) {
     & main > div:first-child {
         transform: translateX(-100px);
     }
     & main form:nth-child(2) {
         transform: translateX(-10%) rotate(3deg);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3) {
+    & main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child{
         transform: translateX(50px);
     }
 }
 
-html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):has(main > div:last-child form label:nth-child(1) button:nth-child(5):hover) {
+html:has(main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child:active):has(main > div:last-child form label:nth-child(1) button:nth-child(5):hover) {
     & main > div:first-child {
         transform: translateY(100px);
     }
     & main form:nth-child(2) {
         transform: translateX(-10%) translateY(-2%);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3) {
+    & main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child{
         transform: translateY(50px);
     }
 }

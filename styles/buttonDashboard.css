@@ -1,3 +1,6 @@
+form:nth-child(3) {
+    transition: 0.7s;
+}
 form:nth-child(3) div {
     border-radius: 5px;
     padding: 0.4em;
@@ -10,6 +13,7 @@ form:nth-child(3) div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0.2rem;
+    max-height: 10em;
 }
 
 form:nth-child(3) div label input[type="checkbox"] {
@@ -30,9 +34,7 @@ input[type="checkbox"] {
     --color-btn-on-bg: rgb(84, 188, 112);
     --color-btn-on-shadow: rgb(84, 188, 112);
 }
-form:nth-child(3) div {
-    max-height: 10em;
-}
+
 form:nth-child(3) div label {
     display: flex;
     justify-content: center;

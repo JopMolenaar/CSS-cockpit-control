@@ -2,7 +2,6 @@
     --standard-animation-speed: 20s;
     --animation-delay: 1s;
     --speed: 5s;
-    /* --animation-speed-border: calc(8s - var(--speed)); */
 }
 
 body {
@@ -114,10 +113,6 @@ main > div:last-child form label:nth-child(1):has(button:nth-child(3):active) {
 main > div:last-child form label:nth-child(1):has(button:nth-child(4):active) {
     transform: perspective(20em) rotateX(-4deg);
 }
-
-
-
-
 main > div:last-child form label div {
     display: grid;
     place-items: center;
@@ -127,7 +122,6 @@ main > div:last-child form label div input {
     transform: rotate(90deg);
     position: absolute;
     z-index: -1;
-    /* transform: translateY(10px); */
 }
 main > div:last-child form label div input:hover {
     z-index: 0;

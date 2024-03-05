@@ -1,5 +1,9 @@
 form:nth-child(2) {
     transition: 0.7s;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    gap: 7em;
+    perspective: 100px;
 }
 form:nth-child(2) div {
     border-radius: 5px;
@@ -8,13 +12,17 @@ form:nth-child(2) div {
     width: fit-content;
     height: 30%;
     margin-top: 0.5em;
-
+    padding-top: 1em;
+    min-width: 5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0.2rem;
     max-height: 10em;
+    border-radius: 50% 50% 4% 5% / 5% 5% 5% 5% ;
 }
+
+
 
 form:nth-child(2) div label input[type="checkbox"] {
     height: 25px;
@@ -59,3 +67,22 @@ form:nth-child(2) div label:has(input[type="checkbox"]:checked) {
         0 0 0.45em var(--color-btn-on-shadow);
     box-shadow: inset 0 0 0.5em 0 black;
 }
+
+
+form:nth-child(2) div:first-child {
+    /* border-radius: 100% 10px 100% 10px / 14% 100% 5px 86%; */
+    border-radius: 100% 7% 4% 5% / 14% 5% 5% 5% ;
+    height: 25%;
+    border: black solid 1px;
+    transform-style: preserve-3d;
+    transform: rotateY(4deg) rotateZ(-14deg) translateY(35px);
+} 
+
+form:nth-child(2) div:last-child {
+    height: 25%;
+    /* border-radius: 14% 100% 5px 86% / 100% 10px 100% 10px; */
+    border-radius: 7% 100% 4% 5% / 5% 14% 5% 5%;
+    border: black solid 1px;
+    transform-style: preserve-3d;
+    transform: rotateY(-4deg) rotateZ(14deg) translateY(35px);
+} 

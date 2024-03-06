@@ -1,3 +1,7 @@
+## Proces CSS tot the rescue 
+
+### Week 1
+
 ```css
 main > div:nth-child(2) > div {
     height:45vh;
@@ -42,3 +46,8 @@ main > div:nth-child(2) > div:nth-child(2) {
     }
 }
 ```
+
+### Week 2
+
+
+

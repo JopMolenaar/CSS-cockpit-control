@@ -36,7 +36,7 @@
     );
     --padding: 1rem;
     /* --animation-speed-border: 10s; */
-    --animation-speed-border: calc(8s + var(--speed));
+    --animation-speed-border: calc(8s + (var(--speed)*1s));
   }
   
   /* Rotating border */

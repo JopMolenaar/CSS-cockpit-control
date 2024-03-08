@@ -1,6 +1,7 @@
 :root {
     --standard-animation-speed: 20s;
-    --animation-delay: 1s;
+    --animation-delay: -1s;
+    /* --animation-delay: 1s; */
 }
 
 /* omgeving */
@@ -14,6 +15,7 @@ main > div:first-child {
 
 main > div > div > div > div {
     background: url("../images/sterren.jpg");
+    /* background: url("../images/planeten.webp"); */
     background-size: cover;
 }
 
@@ -27,9 +29,10 @@ main >div:first-child:before {
 main > div > div {
     display: inline-block;
     vertical-align: middle;
-    perspective: 5px;
+    perspective: calc((var(--speed))*8px);
     perspective-origin: 50% 50%;
     position: relative;
+    transition: 100ms;
 }
 
 main > div > div > div {
@@ -39,12 +42,15 @@ main > div > div > div {
     left: -500px;
     top: -500px;
     transform-style: preserve-3d;
-    animation: move calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear;
+    /* animation: move calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear; */
+    animation: move var(--standard-animation-speed) infinite linear;
+
     animation-fill-mode: forwards;
 }
 
 main > div > div > div:nth-child(2) {
-    animation: move calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear;
+    /* animation: move calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear; */
+    animation: move var(--standard-animation-speed) infinite linear;
     animation-delay: var( --animation-delay);
 }
 
@@ -53,7 +59,8 @@ main > div > div > div > div {
     height: 100%;
     position: absolute;
     opacity: 0;
-    animation: fade calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear;
+    /* animation: fade calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear; */
+    animation: fade var(--standard-animation-speed) infinite linear;
     animation-delay: 0;
 }
 

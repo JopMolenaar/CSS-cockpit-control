@@ -32,7 +32,7 @@ main > div > div {
     perspective: calc((var(--speed))*8px);
     perspective-origin: 50% 50%;
     position: relative;
-    transition: 100ms;
+    transition: 1s;
 }
 
 main > div > div > div {

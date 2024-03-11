@@ -21,7 +21,7 @@ main > div:last-child form label:nth-child(1) div:nth-child(3) {
 }
 
 /* handle */
-/* main > div:last-child form label:nth-child(1) div:nth-child(3)::before {
+main > div:last-child form label:nth-child(1) div:nth-child(3)::before {
     content: "";
     height: 2em;
     aspect-ratio: 1/5;
@@ -31,9 +31,11 @@ main > div:last-child form label:nth-child(1) div:nth-child(3) {
     display: block;
     background-image: linear-gradient(to right, gray, white, gray, silver, darkgray);
     transform-style: preserve-3d;
-    transform:translateX(-50%) rotateY(-20deg);
+    transform:translateX(-50%) rotateY(0deg);
+    /* transform:translateX(-50%) rotateY(54deg) rotateX(58deg); */
     transform-origin: bottom;
-} */
+    transition: 200ms;
+}
 
 /* bol */
 main > div:last-child form label:nth-child(1) div:nth-child(3)::after {
@@ -50,4 +52,5 @@ main > div:last-child form label:nth-child(1) div:nth-child(3)::after {
     transform-style: preserve-3d;
     transform:translateX(-50%) translateY(50%);
     /* transform: rotateX(calc(341deg * -1)) rotateY(calc(345deg * -1)); */
+    transition: 200ms;
 }

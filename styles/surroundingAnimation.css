@@ -1,5 +1,5 @@
 :root {
-    --standard-animation-speed: 20s;
+    --standard-animation-speed: 0s;
     --animation-delay: -1s;
     /* --animation-delay: 1s; */
 }

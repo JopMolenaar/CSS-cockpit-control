@@ -1,21 +1,27 @@
 main > div:first-child {
     transition: 2s
 }
-/* werkt niet */
+/* checkbox maken en dan op hover? */
 html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active) main > div:last-child form label:nth-child(1) button{
     /* opacity: 1; */
     border-radius: 50%;
     z-index: 999;
+    opacity: 0.3;
+    user-select: none;
+    border-right: solid black 10px;
 }
-html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):has(main > div:last-child form label:nth-child(1) button:nth-child(1):hover) {
+html:has(main > div:last-child form label:nth-child(1) button:nth-child(1):hover):has(main > div:last-child form label:nth-child(1) div:nth-child(3):active) {
     & main > div:first-child {
         transform: translateY(-100px);
     }
     & main form:nth-child(2) {
         transform: translateX(-10%) translateY(2%);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3) {
-        transform: translateY(-50px);
+    & main > div:last-child form label:nth-child(1) div:nth-child(3)::after {
+        transform:translateX(-50%) translateY(0%);
+    }
+    & main > div:last-child form label:nth-child(1) div:nth-child(3)::before{
+        z-index: 10;
     }
 }
 
@@ -26,13 +32,11 @@ html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):
     & main form:nth-child(2) {
         transform: translateX(-10%) rotate(-3deg);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3){
-        transform: translateX(-50px);
+    & main > div:last-child form label:nth-child(1) div:nth-child(3)::after{
+        transform:translateX(-50%) translateX(-50px) translateY(50%);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3){
-        /* transform: translateX(-50px); */
-        /* transform: rotate(-30deg) translateY(20px); */
-        /* transform: rotate(-20deg); */
+    & main > div:last-child form label:nth-child(1) div:nth-child(3)::before{
+        transform:translateX(-50%) rotateY(54deg) rotateX(58deg);
     }
 }
 
@@ -43,8 +47,11 @@ html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):
     & main form:nth-child(2) {
         transform: translateX(-10%) rotate(3deg);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3){
-        transform: translateX(50px);
+    & main > div:last-child form label:nth-child(1) div:nth-child(3)::after{
+        transform:translateX(-50%) translateX(50px) translateY(50%);        
+    }
+    & main > div:last-child form label:nth-child(1) div:nth-child(3)::before{
+        transform: translateX(-50%) rotateY(-20deg) rotateX(58deg);
     }
 }
 
@@ -55,8 +62,12 @@ html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):
     & main form:nth-child(2) {
         transform: translateX(-10%) translateY(-2%);
     }
-    & main > div:last-child form label:nth-child(1) div:nth-child(3){
-        transform: translateY(50px);
+    & main > div:last-child form label:nth-child(1) div:nth-child(3)::after{
+        transform:translateX(-50%) translateY(50px) translateY(50%);
+    }
+    & main > div:last-child form label:nth-child(1) div:nth-child(3)::before{
+        height: 0;
+        transform:translateX(-50%) translateY(-10%);
     }
 }
 

@@ -1,6 +1,10 @@
 main > div:first-child {
     transition: 2s
 }
+html:has(main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child:active) main > div:last-child form label:nth-child(1) button {
+    background-color: green;
+    border-radius: 50%;
+}
 html:has(main > div:last-child form label:nth-child(1) div:nth-child(3) div:last-child:active):has(main > div:last-child form label:nth-child(1) button:nth-child(1):hover) {
     & main > div:first-child {
         transform: translateY(-100px);

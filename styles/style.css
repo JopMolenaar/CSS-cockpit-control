@@ -57,7 +57,7 @@ main > div:last-child form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    border-radius: 50% 50% 0 0;
+    border-radius: 20% 20% 0 0;
 }
 main > div:last-child form label {
     display: grid;

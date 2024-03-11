@@ -93,6 +93,9 @@
     form:nth-child(2), form:nth-child(2)::after {
       border-radius: calc(var(--border-radius) - var(--border-size));
     }
+    main > div:last-child form {
+      border-radius: 50% 50% 0 0;
+    }
 }
 
 /* ufo on bigger screen */ 

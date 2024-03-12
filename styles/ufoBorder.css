@@ -1,3 +1,58 @@
+@property --random-h {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --random-s {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 5;
+}
+
+@property --random-l {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 5;
+}
+
+@keyframes random-h {
+  from {
+    --random-h: 0;
+  }
+  
+  to {
+    --random-h: 360;
+  }
+}
+
+@keyframes random-s {
+  from {
+    --random-s: 50;
+  }
+  
+  to {
+    --random-s: 100;
+  }
+}
+
+@keyframes random-l {
+  from {
+    --random-l: 10;
+  }
+  
+  to {
+    --random-l: 30;
+  }
+}
+
+body {
+  animation:
+    random-h 0.7s linear infinite,
+    random-s 1s linear infinite,
+    random-l 0.3s linear infinite;
+}
+
 /* Keyframes */
 @keyframes spin {
     from {
@@ -8,36 +63,18 @@
     }
   }
 
-
   :root{
     --border-radius: 100%;
     --border-size: 0.6rem;
-    --border-bg: conic-gradient(
-      rgb(38, 149, 28) 0.00turn 0.05turn, 
-      rgb(113, 237, 102) 0.05turn 0.10turn, 
-      rgb(38, 149, 28) 0.10turn 0.15turn, 
-      rgb(113, 237, 102) 0.15turn 0.20turn, 
-      rgb(38, 149, 28) 0.20turn 0.25turn, 
-      rgb(113, 237, 102) 0.25turn 0.30turn, 
-      rgb(38, 149, 28) 0.30turn 0.35turn, 
-      rgb(113, 237, 102) 0.35turn 0.40turn, 
-      rgb(38, 149, 28) 0.40turn 0.45turn, 
-      rgb(113, 237, 102) 0.45turn 0.50turn, 
-      rgb(38, 149, 28) 0.50turn 0.55turn, 
-      rgb(113, 237, 102) 0.55turn 0.60turn, 
-      rgb(38, 149, 28) 0.60turn 0.65turn, 
-      rgb(113, 237, 102) 0.65turn 0.70turn, 
-      rgb(38, 149, 28) 0.70turn 0.75turn, 
-      rgb(113, 237, 102) 0.75turn 0.80turn, 
-      rgb(38, 149, 28) 0.80turn 0.85turn, 
-      rgb(113, 237, 102) 0.85turn 0.90turn, 
-      rgb(38, 149, 28) 0.90turn 0.95turn,
-      rgb(113, 237, 102) 0.95turn 1.00turn
-    );
+    --border-clr1: rgb(38, 149, 28);
+    --border-clr2: rgb(113, 237, 102);
+    --ufo-background-color: rgb(68, 113, 71);
+    --color-black: rgba(33,33,33,1);
     --padding: 1rem;
     --animation-speed-border: calc(8s + (var(--speed)*1s));
   }
-  
+
+
   /* Rotating border */
   form:nth-child(2) {
     position: relative;
@@ -58,7 +95,28 @@
   form:nth-child(2)::before {
     content: '';
     display: block;
-    background: var(--border-bg);
+    background: conic-gradient(
+      var(--border-clr1) 0.00turn 0.05turn, 
+      var(--border-clr2) 0.05turn 0.10turn, 
+      var(--border-clr1) 0.10turn 0.15turn, 
+      var(--border-clr2) 0.15turn 0.20turn, 
+      var(--border-clr1) 0.20turn 0.25turn, 
+      var(--border-clr2) 0.25turn 0.30turn, 
+      var(--border-clr1) 0.30turn 0.35turn, 
+      var(--border-clr2) 0.35turn 0.40turn, 
+      var(--border-clr1) 0.40turn 0.45turn, 
+      var(--border-clr2) 0.45turn 0.50turn, 
+      var(--border-clr1) 0.50turn 0.55turn, 
+      var(--border-clr2) 0.55turn 0.60turn, 
+      var(--border-clr1) 0.60turn 0.65turn, 
+      var(--border-clr2) 0.65turn 0.70turn, 
+      var(--border-clr1) 0.70turn 0.75turn, 
+      var(--border-clr2) 0.75turn 0.80turn, 
+      var(--border-clr1) 0.80turn 0.85turn, 
+      var(--border-clr2) 0.85turn 0.90turn, 
+      var(--border-clr1) 0.90turn 0.95turn,
+      var(--border-clr2) 0.95turn 1.00turn
+    );
     width: calc(100% * 1.41421356237);
     padding-bottom: calc(100% * 1.41421356237);
     position: absolute;
@@ -76,10 +134,10 @@
     content: '';
     position: absolute;
     inset: var(--border-size);
-    background: radial-gradient(circle, rgb(68, 113, 71) 0%, rgba(33,33,33,1) 100%);
+    background: radial-gradient(circle, var(--ufo-background-color) 0%, var(--color-black) 100%);
     z-index: -1;
     border-radius: 20% 20% 0 0;
-    box-shadow: inset 0 10px 10px rgb(68, 113, 71) ;
+    /* box-shadow: inset 0 10px 10px  var(--ufo-background-color); */
   }
 
 /* code from https://codepen.io/MauriciAbad/pen/WNrpmPr but experimented and changed it */
@@ -112,3 +170,22 @@
     width: 100%;
   }
 }
+
+html:has(main form div label:nth-child(5) input:checked) {
+  & body {
+    animation-play-state: paused;
+  }
+  form:nth-child(2)::before, form:nth-child(2)::after{
+    --h: var(--random-h);
+    --s: var(--random-s);
+    --l: var(--random-l);
+  }
+  form:nth-child(2)::before {
+    --border-clr1:  hsl(calc(var(--h, 40) + 20), calc(var(--s, 100) * 1%), calc(var(--l, 50) * 3%));
+    --border-clr2:  hsl(calc(var(--h, 40) + 40), calc(var(--s, 100) * 1%), calc(var(--l, 50) * 1.5%));
+  }
+  /* Rotating border after */
+  form:nth-child(2)::after {
+    background: hsl(var(--h, 40), calc(var(--s, 100) * 1%), calc(var(--l, 50) * 1%));
+  }
+ }

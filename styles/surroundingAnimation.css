@@ -1,4 +1,6 @@
 :root {
+    /* --standard-animation-speed: 200s;
+    --animation-delay: -50s; */
     --standard-animation-speed: 20s;
     --animation-delay: -1s;
     /* --animation-delay: 1s; */
@@ -42,14 +44,12 @@ main > div > div > div {
     left: -500px;
     top: -500px;
     transform-style: preserve-3d;
-    /* animation: move calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear; */
     animation: move var(--standard-animation-speed) infinite linear;
 
     animation-fill-mode: forwards;
 }
 
 main > div > div > div:nth-child(2) {
-    /* animation: move calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear; */
     animation: move var(--standard-animation-speed) infinite linear;
     animation-delay: var( --animation-delay);
 }
@@ -59,7 +59,6 @@ main > div > div > div > div {
     height: 100%;
     position: absolute;
     opacity: 0;
-    /* animation: fade calc(var(--standard-animation-speed) + (var(--speed) * 2)) infinite linear; */
     animation: fade var(--standard-animation-speed) infinite linear;
     animation-delay: 0;
 }

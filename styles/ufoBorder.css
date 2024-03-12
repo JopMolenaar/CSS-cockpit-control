@@ -35,7 +35,6 @@
       rgb(113, 237, 102) 0.95turn 1.00turn
     );
     --padding: 1rem;
-    /* --animation-speed-border: 10s; */
     --animation-speed-border: calc(8s + (var(--speed)*1s));
   }
   
@@ -47,11 +46,9 @@
     grid-row: 2/4;
     grid-column: 1/4;
     border-radius: 20% 20% 0 0;
-    /* border-radius: calc((var(--border-radius) - var(--border-size))); */
     z-index: 10;
     display: flex;
     justify-content: center;
-
     /* Om het meer in de ufo te laten lijken */
     width: 120%;
     transform: translateX(-10%);
@@ -82,7 +79,7 @@
     background: radial-gradient(circle, rgb(68, 113, 71) 0%, rgba(33,33,33,1) 100%);
     z-index: -1;
     border-radius: 20% 20% 0 0;
-    /* border-radius: calc(var(--border-radius) - var(--border-size)); */
+    box-shadow: inset 0 10px 10px rgb(68, 113, 71) ;
   }
 
 /* code from https://codepen.io/MauriciAbad/pen/WNrpmPr but experimented and changed it */
@@ -115,29 +112,3 @@
     width: 100%;
   }
 }
-
-
-/* 
-html {
-	height:100dvh;
-	
-	background-image:
-		conic-gradient(from var(--angle, 0deg), crimson,dodgerblue,crimson);
-	
-	animation:draaien .001s linear infinite;
-}
-
-@keyframes draaien {
-	0% {
-		--angle:0deg;
-	}
-	100% {
-		--angle:360deg;
-	}
-}
-
-@property --angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-} */

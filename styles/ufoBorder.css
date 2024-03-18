@@ -171,7 +171,7 @@ body {
   }
 }
 
-html:has(main form div label:nth-child(5) input:checked) {
+html:has(main form div label:nth-child(4) input:checked) {
   & body {
     animation-play-state: paused;
   }

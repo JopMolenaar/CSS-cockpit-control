@@ -39,6 +39,7 @@ input[type="checkbox"] {
     --color-btn-border: black;
     --color-btn-off-bg: rgb(214, 40, 40);
     --color-btn-off-shadow: rgb(255, 0, 0);
+    --color-btn-disabled: gray;
 
     --color-btn-on-bg: rgb(84, 188, 112);
     --color-btn-on-shadow: rgb(84, 188, 112);
@@ -67,6 +68,13 @@ form:nth-child(2) div label:has(input[type="checkbox"]:checked) {
     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
         0 0 0.45em var(--color-btn-on-shadow);
     box-shadow: inset 0 0 0.5em 0 black;
+}
+form:nth-child(2) div label:has(input[type="checkbox"]:disabled) {
+    background-color: var(--color-btn-disabled);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--color-btn-disabled);
+    color: color-mix(in srgb, var(--color-btn-disabled), black 50%);
+    cursor: not-allowed;
 }
 
 

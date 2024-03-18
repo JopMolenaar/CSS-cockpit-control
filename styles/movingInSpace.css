@@ -76,7 +76,7 @@ html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):
     }
 }
 
-html:has(main form div label:nth-child(3) input:checked) {
+html:has(main form div label:nth-child(2) input:checked) {
     & main > div > div {
         perspective: 1px;
     }
@@ -105,7 +105,7 @@ html:has(main form div label:nth-child(1) input:not(:checked)) {
     }
 }
 
-html:has(main form div label:nth-child(4) input:checked) {
+html:has(main form div label:nth-child(3) input:checked) {
     & form:nth-child(2){
         box-shadow: 0px -2px 50px white;
     }

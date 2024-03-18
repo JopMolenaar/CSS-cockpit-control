@@ -130,3 +130,28 @@ main > div:last-child form label div input:hover {
 main > div:last-child form label:first-child input:nth-child(2) {
     transform: rotate(0deg);
 }
+
+
+/* embed { display: none; } 
+input:checked + embed { display: block; } */
+/* audio {
+    width: 50px;
+    position: relative;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #56AEFF;
+
+  }
+  
+  audio::-webkit-media-controls-play-button {
+    background-color: #B1D4E0;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    z-index: 999;
+  } */
+/*   
+  audio::-webkit-media-controls-play-button:hover {
+    background-color: rgba(177,212,224, .7);
+  } */

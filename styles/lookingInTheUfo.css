@@ -1,0 +1,16 @@
+/* hovering on dashboard */
+html:has(form:nth-child(2) > div:nth-child(1):hover) {
+    & main > div:first-child {
+        transform: translateX(100px);
+    }
+}
+html:has(form:nth-child(2) > div:nth-child(2):hover) {
+    & main > div:first-child {
+        transform: translateX(0px);
+    }
+}
+html:has(form:nth-child(2) > div:nth-child(3):hover) {
+    & main > div:first-child {
+        transform: translateX(-100px);
+    }
+}

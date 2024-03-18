@@ -30,14 +30,16 @@ form:nth-child(2) > div:nth-of-type(1){
     border: none;
 }
 h1 {
+    --color-text: rgb(216, 216, 216);
     margin: 0;
     font-size: 2.2em;
     text-transform: uppercase;
     font-variant-numeric: tabular-nums;
-    color: rgb(1, 27, 1);
+    color: var(--color-text);
 
 }
 h1 span{
+    mix-blend-mode: exclusion;
     --animation-speed-font: 7s;
     animation: scale-up-down var(--animation-speed-font) linear infinite;
     animation-delay: calc(var(--index) * 1s - (var(--animation-speed-font)));
@@ -47,18 +49,18 @@ h1 span{
 
 @keyframes scale-up-down {
     0% {
-        text-shadow: 0px 0 0 rgb(1, 27, 1);
+        text-shadow: 0px 0 0 var(--color-text);
     }
     30% {
-        text-shadow: 4px 0 0 rgb(1, 27, 1);
+        text-shadow: 4px 0 0 var(--color-text);
     }
     40% {
-        text-shadow: 2px 0 0 rgb(1, 27, 1);
+        text-shadow: 2px 0 0 var(--color-text);
     }
     50% {
-        text-shadow: 0px 0 0 rgb(1, 27, 1);
+        text-shadow: 0px 0 0 var(--color-text);
     }
     100%{
-        text-shadow: 0px 0 0 rgb(1, 27, 1);
+        text-shadow: 0px 0 0 var(--color-text);
     }
 }

@@ -11,6 +11,7 @@ main > div:last-child form label:nth-child(1) div:nth-child(3) {
     transform: rotateY(-20deg);
     transform-origin: bottom;
     transition: 200ms;
+    cursor: grab;
 }
 
 /* handle */

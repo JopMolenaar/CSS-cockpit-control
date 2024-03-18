@@ -1,6 +1,11 @@
 main > div:first-child {
     transition: 2s;
 }
+
+main > div:last-child form label:nth-child(1) div:nth-child(3):active {
+    cursor: grabbing;
+}
+
 /* checkbox maken en dan op hover? */
 html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active) main > div:last-child form label:nth-child(1) button{
     border-radius: 50%;
@@ -8,6 +13,7 @@ html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active) 
     opacity: 0.3;
     user-select: none;
     border-right: solid black 10px;
+    cursor: grabbing;
 }
 html:has(main > div:last-child form label:nth-child(1) button:nth-child(1):hover):has(main > div:last-child form label:nth-child(1) div:nth-child(3):active) {
     & main > div:first-child {

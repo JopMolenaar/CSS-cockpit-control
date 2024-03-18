@@ -12,7 +12,9 @@ form:nth-child(2) div:nth-of-type(3) {
      linear-gradient(45deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
      linear-gradient(135deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
      conic-gradient( from var(--angle),transparent, rgb(96, 203, 137)),
-     radial-gradient(transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%);
+     radial-gradient(transparent 25%, rgb(96, 203, 137) 25% 26%, transparent 27% 100%),
+     radial-gradient(transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
+     radial-gradient(transparent 75%, rgb(96, 203, 137) 75% 76%, transparent 77% 100%);
      animation: rotate 6s linear infinite;
      /* display: flex; */
 }
@@ -29,7 +31,7 @@ form:nth-child(2) div:nth-of-type(3) {
 form:nth-child(2) div:nth-of-type(3) div:nth-child(1) {
     width: 4px;
     border-radius: 50%;
-    background-color: rgb(33, 80, 33);
+    background-color: rgb(0, 0, 0);
     aspect-ratio: 1;
     margin: 0;
     animation: moveDown 18s linear infinite;
@@ -51,15 +53,15 @@ etc etc
     1% {
         opacity: 100%;
     }
-    17% {
+    20% {
         opacity: 0;
         transform: translateY(-100%);
     }
-    18% {
+    21% {
         opacity: 0;
         transform: translateY(1000%);
     }
-    19% {
+    22% {
         opacity: 100%;
     }
     43%{

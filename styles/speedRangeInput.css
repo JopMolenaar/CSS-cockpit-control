@@ -5,7 +5,7 @@ main > div:last-child form label:nth-child(2) input {
     overflow: hidden;
     height: 60px;
     width: 100%;
-    cursor: pointer;
+    cursor: grab;
     border-radius: 0; /* iOS */
     transform: translateY(20px) rotate(90deg);
     background: none;
@@ -22,11 +22,13 @@ main > div:last-child form label:nth-child(2) input::-webkit-slider-thumb {
     width: 2.2em;
     height: 4em;
     background: #ff3131;
-
     border: 2px solid #680000; 
     border-radius: 5px;
     box-shadow: inset 0 0 8px #000000,  1px 0px 4px 1px #000000;
     margin-top: calc(1.5em * 0.5 - max(4em * 0.5,0.3em));
+}
+main > div:last-child form label:nth-child(2) input::-webkit-slider-thumb:active {
+    cursor: grabbing;
 }
 
 /* Mozilla Firefox */

@@ -8,13 +8,10 @@ main > div:first-child {
     grid-row: 1/3;
     grid-column: 1/4;
     text-align: center;
-    /* transform: translateX(-100px); */
-    /* when hovering on the dashbord */
 }
 
 main > div > div > div > div {
     background: url("../images/sterren.jpg");
-    /* background: url("../images/planeten.webp"); */
     background-size: cover;
 }
 

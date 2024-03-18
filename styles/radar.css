@@ -53,15 +53,15 @@ etc etc
     1% {
         opacity: 100%;
     }
-    20% {
+    18% {
         opacity: 0;
         transform: translateY(-100%);
     }
-    21% {
+    19% {
         opacity: 0;
         transform: translateY(1000%);
     }
-    22% {
+    20% {
         opacity: 100%;
     }
     43%{

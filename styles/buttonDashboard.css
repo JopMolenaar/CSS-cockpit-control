@@ -4,14 +4,12 @@ form:nth-of-type(1) {
     gap: 9vw;
     perspective: 100px;
 }
-form:nth-child(2) div {
+form:nth-child(2) > div {
     border-radius: 5px;
-    padding: 0.4em;
     background-color: rgba(128, 128, 128, 0.319);
     width: 211px;
     height: 28%;
     margin-top: 0.5em;
-    padding-top: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -19,11 +17,15 @@ form:nth-child(2) div {
     max-height: 10em;
     border-radius: 50% 50% 4% 5% / 5% 5% 5% 5% ;
 }
-form:nth-child(2) div label {
+form:nth-child(2) > div:nth-child(2){
+    padding: 0.4em;
+    padding-top: 1em;
+}
+form:nth-child(2) > div label {
     font-size: 0.9em;
 }
 
-form:nth-child(2) div label input[type="checkbox"] {
+form:nth-child(2) > div label input[type="checkbox"] {
     height: 25px;
     width: 25px;
 }
@@ -42,7 +44,7 @@ input[type="checkbox"] {
     --color-btn-on-shadow: rgb(84, 188, 112);
 }
 
-form:nth-child(2) div label {
+form:nth-child(2) > div label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +70,7 @@ form:nth-child(2) div label:has(input[type="checkbox"]:checked) {
 }
 
 
-form:nth-child(2) div:first-child {
+form:nth-child(2) > div:first-child {
     border-radius: 100% 7% 4% 5% / 14% 5% 5% 5% ;
     width: 13vw;
     max-height: 7em;
@@ -78,7 +80,7 @@ form:nth-child(2) div:first-child {
     aspect-ratio: 3/4;
 } 
 
-form:nth-child(2) div:last-child {
+form:nth-child(2) > div:last-child {
     width: 13vw;
     max-height: 7em;
     border-radius: 7% 100% 4% 5% / 5% 14% 5% 5%;
@@ -92,7 +94,7 @@ form:nth-child(2) div:last-child {
     form:nth-child(2) {
         gap: 7vw;
     }
-    form:nth-child(2) div:first-child, form:nth-child(2) div:last-child  {
+    form:nth-child(2) > div:first-child, form:nth-child(2) > div:last-child  {
         margin-top: 2em;
     }
     form:nth-child(2) div {
@@ -101,7 +103,7 @@ form:nth-child(2) div:last-child {
     form:nth-child(2) div label {
         font-size: 1em;
     }
-    form:nth-child(2) div:not(:nth-child(2)) {
+    form:nth-child(2) > div:not(:nth-child(2)) {
         width: 10vw;
         max-width: 8em;
     }

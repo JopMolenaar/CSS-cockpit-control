@@ -1,0 +1,90 @@
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+
+form:nth-child(2) div:nth-of-type(3) {
+    overflow: hidden;
+     background:
+     linear-gradient(0deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
+     linear-gradient(90deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
+     linear-gradient(45deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
+     linear-gradient(135deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
+     conic-gradient( from var(--angle),transparent, rgb(96, 203, 137)),
+     radial-gradient(transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%);
+     animation: rotate 6s linear infinite;
+     /* display: flex; */
+}
+
+@keyframes rotate {
+    0% {
+        --angle: 100deg;
+    }
+    100% {
+        --angle: 460deg;
+    }
+}
+
+form:nth-child(2) div:nth-of-type(3) div:nth-child(1) {
+    width: 4px;
+    border-radius: 50%;
+    background-color: rgb(33, 80, 33);
+    aspect-ratio: 1;
+    margin: 0;
+    animation: moveDown 18s linear infinite;
+    transform: translateY(-100%);
+    margin-left: 2em;
+}
+
+/* TODO custom properties en berekeningen? */
+/* 
+3 keer moven in --animation-time-radar
+etc etc
+ */
+@keyframes moveDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    1% {
+        opacity: 100%;
+    }
+    17% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    18% {
+        opacity: 0;
+        transform: translateY(1000%);
+    }
+    19% {
+        opacity: 100%;
+    }
+    43%{
+        opacity: 0;
+        transform: translateY(1000%);
+    }
+    44% {
+        opacity: 0;
+        transform: translateY(2000%);
+    }
+    45% {
+        opacity: 100%;
+    }
+    76%{
+        opacity: 0;
+        transform: translateY(2000%);
+    }
+    77% {
+        opacity: 0;
+        transform: translateY(3000%);
+    }
+    78% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(3000%);
+    }
+}

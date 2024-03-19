@@ -9,7 +9,7 @@
     --index: 2;
 }
 :nth-of-type(4){
-    /* --index: 3; */
+    --index: 3;
 }
 :nth-of-type(5){
     --index: 4;
@@ -33,9 +33,7 @@ h1 {
     margin: 0;
     font-size: 2.2em;
     text-transform: uppercase;
-    font-variant-numeric: tabular-nums;
     color: var(--color-text);
-
 }
 h1 span{
     mix-blend-mode: exclusion;
@@ -43,8 +41,6 @@ h1 span{
     animation: scale-up-down var(--animation-speed-font) linear infinite;
     animation-delay: calc(var(--index) * 1s - (var(--animation-speed-font)));
 }
-
-
 
 @keyframes scale-up-down {
     0% {

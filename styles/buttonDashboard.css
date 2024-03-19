@@ -1,3 +1,12 @@
+:root {
+    --color-btn-border: black;
+    --color-btn-off-bg: rgb(214, 40, 40);
+    --color-btn-off-shadow: rgb(255, 0, 0);
+    --color-btn-disabled: gray;
+
+    --color-btn-on-bg: rgb(84, 188, 112);
+    --color-btn-on-shadow: rgb(84, 188, 112);
+}
 form:nth-of-type(1) {
     transition: 0.7s;
     flex-direction: row;
@@ -34,17 +43,6 @@ input[type="checkbox"] {
     position: absolute;
     left: -9999px;
 }
-
-:root {
-    --color-btn-border: black;
-    --color-btn-off-bg: rgb(214, 40, 40);
-    --color-btn-off-shadow: rgb(255, 0, 0);
-    --color-btn-disabled: gray;
-
-    --color-btn-on-bg: rgb(84, 188, 112);
-    --color-btn-on-shadow: rgb(84, 188, 112);
-}
-
 form:nth-child(2) > div label {
     display: flex;
     justify-content: center;

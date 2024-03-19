@@ -1,3 +1,11 @@
+:root {
+    --radar-color: rgb(96, 203, 137);
+    --animation-duration-radar: 6s;
+    --times-object-moving: 3; /* 2 or 3 */
+    --whole-radar-translate: 3000%;
+    --animation-duration-object: calc(var(--animation-duration-radar)*var(--times-object-moving));
+}
+
 @property --angle {
     syntax: "<angle>";
     inherits: false;
@@ -7,24 +15,24 @@
 form:nth-child(2) div:nth-of-type(3) {
     overflow: hidden;
      background:
-     linear-gradient(0deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
-     linear-gradient(90deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
-     linear-gradient(45deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
-     linear-gradient(135deg, transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
-     conic-gradient( from var(--angle),transparent, rgb(96, 203, 137)),
-     radial-gradient(transparent 25%, rgb(96, 203, 137) 25% 26%, transparent 27% 100%),
-     radial-gradient(transparent 50%, rgb(96, 203, 137) 49% 51%, transparent 51% 100%),
-     radial-gradient(transparent 75%, rgb(96, 203, 137) 75% 76%, transparent 77% 100%);
-     animation: rotate 6s linear infinite;
-     /* display: flex; */
+     linear-gradient(0deg, transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     linear-gradient(90deg, transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     linear-gradient(45deg, transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     linear-gradient(135deg, transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     conic-gradient( from var(--angle),transparent, var(--radar-color)),
+     radial-gradient(transparent 25%, var(--radar-color) 25% 26%, transparent 27% 100%),
+     radial-gradient(transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     radial-gradient(transparent 75%, var(--radar-color) 75% 76%, transparent 77% 100%);
+     animation: rotate var(--animation-duration-radar) linear infinite;
+     animation-delay: -1.65s;
 }
 
 @keyframes rotate {
     0% {
-        --angle: 100deg;
+        --angle: 0deg;
     }
     100% {
-        --angle: 460deg;
+        --angle: 360deg;
     }
 }
 
@@ -34,18 +42,60 @@ form:nth-child(2) div:nth-of-type(3) div:nth-child(1) {
     background-color: rgb(0, 0, 0);
     aspect-ratio: 1;
     margin: 0;
-    animation: moveDown 18s linear infinite;
+    animation: moveDown var(--animation-duration-object) linear infinite;
     transform: translateY(-100%);
     margin-left: 2em;
 }
 
-/* TODO custom properties en berekeningen? */
-/* 
-3 keer moven in --animation-time-radar
-etc etc
+/* @keyframes moveDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    1% {
+        opacity: 100%;
+    }
+    18% {
+        transform: translateY(-100%);
+    }
+    19% {
+        transform: translateY(calc(var(--whole-radar-translate) / var(--times-object-moving)));
+    }
+    20% {
+        opacity: 100%;
+    }
+    40%{
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving)));
+    }
+    41% {
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 2));
+    }
+    42% {
+        opacity: 100%;
+    }
+    62%{
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 2));
+    }
+    63% {
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 3));
+    }
+    64% {
+        opacity: 100%;
+    }
+    84% {
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 3));
+    }
+    85% {
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 4));
+    }
+    86% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}  */
 
- */
-@keyframes moveDown {
+ @keyframes moveDown {
     0% {
         opacity: 0;
         transform: translateY(-100%);
@@ -59,35 +109,35 @@ etc etc
     }
     19% {
         opacity: 0;
-        transform: translateY(1000%);
+        transform: translateY(calc(var(--whole-radar-translate) / var(--times-object-moving)));
     }
     20% {
         opacity: 100%;
     }
     43%{
         opacity: 0;
-        transform: translateY(1000%);
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving)));
     }
     44% {
         opacity: 0;
-        transform: translateY(2000%);
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 2));
     }
     45% {
         opacity: 100%;
     }
     76%{
         opacity: 0;
-        transform: translateY(2000%);
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 2));
     }
     77% {
         opacity: 0;
-        transform: translateY(3000%);
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 3));
     }
     78% {
         opacity: 100%;
     }
     100% {
         opacity: 0;
-        transform: translateY(3000%);
+        transform: translateY(calc(var(--whole-radar-translate)  / var(--times-object-moving) * 3));
     }
-}
+} 

@@ -73,3 +73,51 @@ Op vrijdag hadden we een beoordelingsgesprek en toen zei Sanne dat ik beter de p
 
 
 ### Week 3
+
+Deze week was ik bezig met de joystick en de repsonsiveness van mijn ufo. Op kleine schermen is het dashboard namelijk slecht zichtbaar en overlapte de elementen elkaar. Ook werd de border heel rond waardoor de elementen uit het dashboard uit de ufo staken. Dit heb ik opgelost met wat media queries. De joystick was wel een uitdaging. Ik begon met buttons die op click de ufo kantelde en de omgeving verplaatste. Daarna begon ik met het maken van de joystick. Ik begon met 2 divjes en later werden het de `:before` en `:after` van een div want ik wilde oefenen met `:before` en `:after`.
+Ik heb geprobeerd om het als geheel te kantelen en los, en daarbij zag los er beter uit. Wel lijkt het stokje soms niet echt aan de bol vast te zitten maar dit zijn kleine momenten en ook alleen als je naar links of rechts stuurt. Wel zit de joystick er goed uit als je hem naar je toe trekt en van je af duwt.
+Ik liet de buttons later de omgeving beinvloeden door erop te hoveren maar dat voelde niet echt chill en realistisch. Toen kreeg ik een idee van een klasgenoot die active ophet element in het midden en dan hover op de buttons had om de joystick te bewegen. Dit geeft je het gevoel dat je de joystick vast moet houden en dan kan bewegen. Dit heb ik toen toegepast en het werkte prima. Het enige probleem was dat de joystick tripte als je naar rechts wilde sturen. Ik heb geprobeerd dit op te lossen door de bol kleiner te maken, de buttons groter en de buttons verder weg van de joystick maar niks leek te werken.
+
+### Week 4 
+
+Deze week ging ik de radar maken, propeerde ik een sound toe te voegen van een opstartende ufo als je de power aanzet. En experimenteerde ik met verschillende afbeelingen van de ruimte. Ook voegde ik een titel toe met een kleine animatie in de ufo. En voegde ik bepaalde cursors toe met handjes die dingen kunnen grijpen waardoor de gebruiker weet wat hij kan aanklikken en vastpakken etc.
+
+Ook probeerde ik op hover van het dashboard, het ruimte schip met de achtergrond een beetje te laten bewegen. Dit lukte natuurlijk wel met de achtergrond maar met het ruimte schip lukte dat niet. Dit komt omdat het ruimte schip natuurlijk niet 3D is en de achtergrond wel. Uiteindelijk heb ik alleen de achtergrond een beetje laten bewegen en niet het ruimte schip. De volgende keer maak ik de cockpit wel 3D en dan zou dit wel moeten lukken. 
+
+#### De radar
+
+De radar maken ging best goed. Met linear en radial gradients maakte ik de lijnen op de radar. En met een conic gradient maakte ik hetgene dat rond draait. 
+
+```css
+form:nth-child(2) div:nth-of-type(3) {
+    overflow: hidden;
+     background:
+     linear-gradient(0deg, transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     linear-gradient(90deg, transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     linear-gradient(45deg, transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     linear-gradient(135deg, transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     conic-gradient( from var(--angle),transparent, var(--radar-color)),
+     radial-gradient(transparent 25%, var(--radar-color) 25% 26%, transparent 27% 100%),
+     radial-gradient(transparent 50%, var(--radar-color) 49% 51%, transparent 51% 100%),
+     radial-gradient(transparent 75%, var(--radar-color) 75% 76%, transparent 77% 100%);
+     animation: rotate var(--animation-duration-radar) linear infinite;
+     animation-delay: -1.65s;
+}
+
+@keyframes rotate {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+```
+
+Ook maakte ik een zwart rond divje van 4px die van boven naar beneden gaat in de radar, en alleen zichtbaar is wanneer de radar erover heen is gegaan. Na wat timen lukte dit maar ik wist al zeker dat dit veel beter kan wordne geschreven. Op dinsdag begon ik met het herschrijven van deze regels en met berekeningen en custom properties dit veel dynamischer te maken. 
+
+Uiteindelijk lukte het mij niet om heel ver te komen. Uiteindelijk wertke 2 en 3 stappen maar meer niet. Dit komt omdat het vaste keyframes zijn een die kan je niet dynamisch aanmaken. Wel heb ik een beetje geprobeerd te rekenen van hoeveel het divje naar beneden moet bewegen aan de hand van hoevaak die moet bewegen, en heb ik meerdere keyframes aangemaakt. Maar wanneer die moet bewegen is afhankelijk van de tijd van het rondje van de radar, de afstand en natuurlijk waar die gepositioneerd is in de radar. Hier kwam ik niet uit. 
+
+#### Geluid
+
+Het afspelen van geluid is mij niet gelukt deze weken. Wel heb ik het geprobeerd, en door alle webkit attributen op het audio element op display none te zetten, en de playbutton een hoge z-index te geven kan je dus alleen de playbutton zien. Als je die dan een `opacity: 0;` geeft en hem boven op de button zet kan je dus een geluid afspelen. Alleen dan kan je niet met `:has()` de button erachter zogenaamd op acitve zetten. Dus ik besloot om dit te laten, en de button te disabelen.  

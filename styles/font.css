@@ -1,4 +1,3 @@
-/* index? */
 :nth-of-type(1){
     --index: 0;
 }
@@ -21,20 +20,47 @@
     --index: 6;
 }
 
+
+body {
+    /* font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto; */
+
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 form:nth-child(2) > div:nth-of-type(1){
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     border: none;
-}
+} 
+
 h1 {
     --color-text: rgb(216, 216, 216);
     margin: 0;
     font-size: 2.2em;
     text-transform: uppercase;
     color: var(--color-text);
+    font-weight: 400;
+    font-style: normal;
+    /*font-variation-settings:
+       "slnt" -10,
+      "wdth" 100,
+      "GRAD" 0,
+      "XOPQ" 96,
+      "XTRA" 468,
+      "YOPQ" 135,
+      "YTAS" 750,
+      "YTDE" -203,
+      "YTFI" 738,
+      "YTLC" 416,
+      "YTUC" 712; */
+    /* animation: blink 3s linear infinite; */
 }
+
 h1 span{
     mix-blend-mode: exclusion;
     --animation-speed-font: 7s;
@@ -57,5 +83,36 @@ h1 span{
     }
     100%{
         text-shadow: 0px 0 0 var(--color-text);
+    }
+} 
+
+
+
+
+
+/* YTLC: 416-570 */
+/* YOPQ: 25-135 */
+/* YTAS: 649-854 */
+@keyframes blink {
+    0%{
+        font-variation-settings:
+        "YTAS" 649,
+        "YTLC" 416,
+        "YOPQ" 25;
+    }
+    50%{
+        font-variation-settings:
+        "YTAS" 854,
+        "YTLC" 570,
+        "YOPQ" 135;
+    }
+    100%{
+        font-variation-settings:
+        /* "YTAS" 649,
+        "YTLC" 416,
+        "YOPQ" 25; */
+        "YTAS" 854,
+        "YTLC" 570,
+        "YOPQ" 135;
     }
 }

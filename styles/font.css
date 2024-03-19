@@ -1,3 +1,9 @@
+@font-face {
+    font-family: ExtendomaticVariable-VF;
+    src: url("../ExtendomaticVariable-VF.woff2");
+}
+
+
 :nth-of-type(1){
     --index: 0;
 }
@@ -22,12 +28,12 @@
 
 
 body {
-    /* font-family: "Roboto Flex", sans-serif;
-    font-optical-sizing: auto; */
+    /* font-family: "Roboto Flex", sans-serif; */
+    font-optical-sizing: auto;
 
-    font-family: "Gugi", sans-serif;
+    font-family: "Gugi", sans-serif; 
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; 
 }
 
 form:nth-child(2) > div:nth-of-type(1){
@@ -39,33 +45,29 @@ form:nth-child(2) > div:nth-of-type(1){
 } 
 
 h1 {
+    font-family: "ExtendomaticVariable-VF";
+    /* slnt
+    TRAK
+    wght */
     --color-text: rgb(216, 216, 216);
     margin: 0;
     font-size: 2.2em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: var(--color-text);
     font-weight: 400;
     font-style: normal;
-    /*font-variation-settings:
+    font-variation-settings:
        "slnt" -10,
       "wdth" 100,
-      "GRAD" 0,
-      "XOPQ" 96,
-      "XTRA" 468,
-      "YOPQ" 135,
-      "YTAS" 750,
-      "YTDE" -203,
-      "YTFI" 738,
-      "YTLC" 416,
-      "YTUC" 712; */
-    /* animation: blink 3s linear infinite; */
+      "TRAK" 0;
+    animation: blink 3s linear infinite;
 }
 
 h1 span{
-    mix-blend-mode: exclusion;
+    /* mix-blend-mode: exclusion;
     --animation-speed-font: 7s;
     animation: scale-up-down var(--animation-speed-font) linear infinite;
-    animation-delay: calc(var(--index) * 1s - (var(--animation-speed-font)));
+    animation-delay: calc(var(--index) * 1s - (var(--animation-speed-font))); */
 }
 
 @keyframes scale-up-down {
@@ -96,23 +98,20 @@ h1 span{
 @keyframes blink {
     0%{
         font-variation-settings:
-        "YTAS" 649,
-        "YTLC" 416,
-        "YOPQ" 25;
+        "slnt" 20,
+        "wdth" 100,
+        "TRAK" 300;
     }
     50%{
         font-variation-settings:
-        "YTAS" 854,
-        "YTLC" 570,
-        "YOPQ" 135;
+        "slnt" -20,
+        "wdth" 100,
+        "TRAK" 0;
     }
     100%{
         font-variation-settings:
-        /* "YTAS" 649,
-        "YTLC" 416,
-        "YOPQ" 25; */
-        "YTAS" 854,
-        "YTLC" 570,
-        "YOPQ" 135;
+        "slnt" 20,
+        "wdth" 100,
+        "TRAK" 300;
     }
 }

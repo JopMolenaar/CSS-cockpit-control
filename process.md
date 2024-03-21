@@ -86,6 +86,8 @@ Ook probeerde ik op hover van het dashboard, het ruimte schip met de achtergrond
 
 Ook heb ik deze week @layers toegoegd aan een aantal css files. Dit deed ik omdat het een requirement was van de opdracht. @layers kan je goed gebruiken om lagen zoals: basis, layout, stylingComponents, specialStyling te definieren en zo iets overzichtelijkere code kan schrijven. Ook kan je het gebruiken om specificity problemen op te lossen. Helaas heb ik dit niet mijn code voor zien komen, maar als het voorkomt kan je bijvoorbeeld zo: `@layer base, special;` de volgorde van de layers definieren. 
 
+Op donderdag heb ik de joystick gefixed. Hij tripte helaaml als je hem naar rechts en naar beneded trok, en dat lag aan een rotateY op de label. Hier kwam ik achter na een hoop inspecteren en dingen uitzetten. Ik moest daarna wel wat values van de `:before` veranderen zodat die mooi meegaat met het hoofd van de joystick.
+
 #### De radar
 
 De radar maken ging best goed. Met linear en radial gradients maakte ik de lijnen op de radar. En met een conic gradient maakte ik hetgene dat rond draait. 

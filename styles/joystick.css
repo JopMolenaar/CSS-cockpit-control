@@ -60,7 +60,6 @@
         position: absolute;
         left: -0.8em;
         transform-style: preserve-3d;
-        transform: rotateY(-20deg);
         transform-origin: bottom;
         transition: 200ms;
         cursor: grab;

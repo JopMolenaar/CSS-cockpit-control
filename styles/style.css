@@ -50,6 +50,7 @@
     }
     main > div:last-child form {
         width: 85%;
+        min-width: 29em;
         height: 108%;
         position: absolute;
         background: rgba(33,33,33,0.2) ;

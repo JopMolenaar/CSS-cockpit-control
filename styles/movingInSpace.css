@@ -41,7 +41,8 @@ html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):
         transform:translateX(-50%) translateX(-50px) translateY(50%);
     }
     & main > div:last-child form label:nth-child(1) div:nth-child(3)::before{
-        transform:translateX(-50%) rotateY(54deg) rotateX(58deg);
+        transform:translateX(-50%) rotateY(50deg) rotateX(50deg);
+        aspect-ratio: 1/4;
     }
 }
 
@@ -56,7 +57,8 @@ html:has(main > div:last-child form label:nth-child(1) div:nth-child(3):active):
         transform:translateX(-50%) translateX(50px) translateY(50%);        
     }
     & main > div:last-child form label:nth-child(1) div:nth-child(3)::before{
-        transform: translateX(-50%) rotateY(-20deg) rotateX(58deg);
+        transform: translateX(-50%) rotateY(-50deg) rotateX(50deg);
+        aspect-ratio: 1/4;
     }
 }
 

@@ -16,7 +16,7 @@ form:nth-of-type(1) {
 form:nth-child(2) > div {
     border-radius: 5px;
     background-color: rgba(128, 128, 128, 0.319);
-    width: 211px;
+    width: 308px;
     height: 28%;
     margin-top: 0.5em;
     display: grid;
@@ -98,7 +98,7 @@ form:nth-child(2) > div:last-child {
 
 @media(min-width: 670px){
     form:nth-child(2) {
-        gap: 7vw;
+        gap: 9vw;
     }
     form:nth-child(2) > div:first-child, form:nth-child(2) > div:last-child  {
         margin-top: 2em;

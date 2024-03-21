@@ -1,36 +1,11 @@
 @font-face {
     font-family: ExtendomaticVariable-VF;
-    src: url("../ExtendomaticVariable-VF.woff2");
+    src: url("../fonts/ExtendomaticVariable-VF.woff2");
 }
-
-
-:nth-of-type(1){
-    --index: 0;
-}
-:nth-of-type(2){
-    --index: 1;
-}
-:nth-of-type(3){
-    --index: 2;
-}
-:nth-of-type(4){
-    --index: 3;
-}
-:nth-of-type(5){
-    --index: 4;
-}
-:nth-of-type(6){
-    --index: 5;
-}
-:nth-of-type(7) {
-    --index: 6;
-}
-
 
 body {
     /* font-family: "Roboto Flex", sans-serif; */
     font-optical-sizing: auto;
-
     font-family: "Gugi", sans-serif; 
     font-weight: 400;
     font-style: normal; 
@@ -49,6 +24,7 @@ h1 {
     /* slnt
     TRAK
     wght */
+    --trak: calc(500 - var(--speed)*20);
     --color-text: rgb(216, 216, 216);
     margin: 0;
     font-size: 2.2em;
@@ -60,58 +36,39 @@ h1 {
        "slnt" -10,
       "wdth" 100,
       "TRAK" 0;
-    animation: blink 3s linear infinite;
+    animation: slide 3s linear infinite;
+    max-width: 2em;
 }
 
-h1 span{
-    /* mix-blend-mode: exclusion;
-    --animation-speed-font: 7s;
-    animation: scale-up-down var(--animation-speed-font) linear infinite;
-    animation-delay: calc(var(--index) * 1s - (var(--animation-speed-font))); */
-}
+@property --trak {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 150;
+  }
 
-@keyframes scale-up-down {
-    0% {
-        text-shadow: 0px 0 0 var(--color-text);
-    }
-    30% {
-        text-shadow: 4px 0 0 var(--color-text);
-    }
-    40% {
-        text-shadow: 2px 0 0 var(--color-text);
-    }
-    50% {
-        text-shadow: 0px 0 0 var(--color-text);
-    }
-    100%{
-        text-shadow: 0px 0 0 var(--color-text);
-    }
-} 
-
-
-
-
-
-/* YTLC: 416-570 */
-/* YOPQ: 25-135 */
-/* YTAS: 649-854 */
-@keyframes blink {
+@keyframes slide {
     0%{
         font-variation-settings:
         "slnt" 20,
-        "wdth" 100,
-        "TRAK" 300;
+        "wght" 200,
+        "TRAK" var(--trak);
     }
-    50%{
+    75%{
         font-variation-settings:
         "slnt" -20,
-        "wdth" 100,
+        "wght" 500,
         "TRAK" 0;
+    }
+    80%{
+        font-variation-settings:
+        "slnt" 20,
+        "wght" 400,
+        "TRAK" 50;
     }
     100%{
         font-variation-settings:
         "slnt" 20,
-        "wdth" 100,
-        "TRAK" 300;
+        "wght" 200,
+        "TRAK" var(--trak);
     }
 }

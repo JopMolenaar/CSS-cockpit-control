@@ -1,6 +1,15 @@
+/* Colors */
+:root {
+    --background-color: black;
+    --form-background-color: rgba(43, 43, 43, 0.7);
+    --button-background-color: rgba(33,33,33,0.2);
+    --label-color: rgb(255, 255, 255);
+}
+
+/* Base styles */
 @layer base {
     body {
-        background-color: black;
+        background-color: var(--background-color);
     }
 
     body,
@@ -13,13 +22,13 @@
 
     section,
     form {
-        background-color: rgba(43, 43, 43, 0.7);
+        background-color: var(--form-background-color);
         height: 100%;
     }
 }
 
+/* Visually hidden */
 @layer classVH {
-    /* visually hidden */
     main > div:last-child form label:nth-child(2) span {
         clip: rect(0 0 0 0);
         clip-path: inset(50%);
@@ -31,6 +40,7 @@
     }
 }
 
+/* Layout styles */
 @layer layout {
     main {
         display: grid;
@@ -48,12 +58,13 @@
         justify-content: center;
         width: 100%;
     }
+
     main > div:last-child form {
         width: 85%;
         min-width: 29em;
         height: 108%;
         position: absolute;
-        background: rgba(33,33,33,0.2) ;
+        background: var(--button-background-color);
         transform-style: preserve-3d;
         transform: rotateX(10deg) translateY(-14%);
         display: grid;
@@ -61,13 +72,15 @@
         align-items: center;
         border-radius: 20% 20% 0 0;
     }
+
     main > div:last-child form label {
         display: grid;
         place-items: center;
-        color: rgb(255, 255, 255);
+        color: var(--label-color);
         font-size: 2em;
         margin: auto;
     }
+
     main > div:last-child form label div {
         display: grid;
         place-items: center;

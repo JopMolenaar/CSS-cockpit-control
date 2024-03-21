@@ -3,7 +3,6 @@
     --color-btn-off-bg: rgb(214, 40, 40);
     --color-btn-off-shadow: rgb(255, 0, 0);
     --color-btn-disabled: gray;
-
     --color-btn-on-bg: rgb(84, 188, 112);
     --color-btn-on-shadow: rgb(84, 188, 112);
 }
@@ -74,26 +73,22 @@ form:nth-child(2) div label:has(input[type="checkbox"]:disabled) {
     color: color-mix(in srgb, var(--color-btn-disabled), black 50%);
     cursor: not-allowed;
 }
-
+form:nth-child(2) > div:first-child, form:nth-child(2) > div:last-child{
+    width: 13vw;
+    max-height: 7em;
+    border: black solid 1px;
+    transform-style: preserve-3d;
+    aspect-ratio: 3/4;
+}
 
 form:nth-child(2) > div:first-child {
     border-radius: 100% 7% 4% 5% / 14% 5% 5% 5% ;
-    width: 13vw;
-    max-height: 7em;
-    border: black solid 1px;
-    transform-style: preserve-3d;
     transform: rotateY(4deg) rotateZ(-14deg) translateY(35px);
-    aspect-ratio: 3/4;
 } 
 
 form:nth-child(2) > div:last-child {
-    width: 13vw;
-    max-height: 7em;
     border-radius: 7% 100% 4% 5% / 5% 14% 5% 5%;
-    border: black solid 1px;
-    transform-style: preserve-3d;
     transform: rotateY(-4deg) rotateZ(14deg) translateY(35px);
-    aspect-ratio: 3/4;
 } 
 
 @media(min-width: 670px){

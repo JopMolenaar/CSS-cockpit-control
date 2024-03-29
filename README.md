@@ -5,6 +5,8 @@
 This project was about making a control panel with CSS only, where a lot of people will make a Javascript function for. I wanted to make a cockpit of an UFO that has working buttons with CSS only (accept the js needed for the range input). That you can move through space with different speeds.
 It was a project to discover the true power of CSS and to see what you can do with it nowadays. 
 
+## Process
+
 [Link to process (Dutch) ](https://github.com/JopMolenaar/CSS-cockpit-control/blob/main/process.md)
 <!-- update when the blog is online -->
 

@@ -2,8 +2,7 @@
 
 ## Description
 
-This project was about making a control panel with CSS only, where a lot of people will make a Javascript function for. I wanted to make a cockpit of an UFO that has working buttons with CSS only (accept the js needed for the range input). That you can move through space with different speeds.
-It was a project to discover the true power of CSS and to see what you can do with it nowadays. 
+This project was about learning and discovering the true power of CSS by only using css selectors and no Javascript to see what you can do with it nowadays. I wanted to make a cockpit of an UFO that has working buttons, a working joystick and that you can move through space with different speeds all with css only (accept the js needed for the range input). Be aware that the animation of the UFO moving through space is pretty heavy for your machine, so I advice you to watch it at least on a decent laptop. 
 
 ## Process
 
